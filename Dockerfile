@@ -16,7 +16,7 @@ RUN apk --no-cache add wget ca-certificates \
     bison flex-dev unixodbc unixodbc-dev txt2man \
     unzip p7zip && \
 	cd /tmp && \
-  	wget "https://github.com/mdbtools/releases/download/v1.0.0/mdbtools-1.0.0.zip" && \
+  	wget "https://github.com/mdbtools/mdbtools/releases/download/v1.0.0/mdbtools-1.0.0.zip" && \
     unzip mdbtools-1.0.0.zip && rm mdbtools-1.0.0.zip && \
     cd mdbtools-1.0.0 && \
     autoreconf -i -f && \
