@@ -15,4 +15,8 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag mdbtools:1.0.0
+      run: docker build . --file Dockerfile --tag prashant2020/mdbtools:1.0.0
+    - name: Login to Docker
+      run: docker login -u ${{ secrets.DOCKERHUB_USERNAME }} -p ${{ secrets.DOCKERHUB_PASSWORD }}
+    - name: Push to Docker hub
+      run: docker push prashant2020/mdbtools:1.0.0
