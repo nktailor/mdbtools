@@ -20,7 +20,7 @@ RUN apk --no-cache add wget ca-certificates \
     unzip mdbtools-1.0.0.zip && rm mdbtools-1.0.0.zip && \
     cd mdbtools-1.0.0 && \
     autoreconf -i -f && \
-    ./configure MAKE="gmake" --with-unixodbc=/usr/local && make && make install && \
+    ./configure --with-unixodbc=/usr/local && make && make install && \
     cd /tmp && \
     apk del autoconf automake build-base glib-dev libc-dev unixodbc-dev flex-dev && \
     rm -rf mdbtools-1.0.0
